@@ -11,8 +11,8 @@ jobs:
       - name: Tests
         uses: twattley/test-actions-remote/test_action@main
         with:
+          github-pat: ${{ secrets.TW_PAT }}
           repository: twattley/test-actions-remote
-          token: ${{ secrets.TW_PAT }}
 
       - name: Check Common Actions Repository
         run: | 
