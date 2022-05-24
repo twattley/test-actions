@@ -1,0 +1,12 @@
+name: Common Action
+
+on:
+  - push
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Tests
+        uses: twattley/test-actions-remote/test_action@master
