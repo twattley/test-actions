@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Tests
-        uses: twattley/test-actions-remote/test_action@master
+        uses: test-actions-remote/test_action@master
