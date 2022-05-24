@@ -15,7 +15,6 @@ jobs:
           token: ${{ secrets.TW_PAT }}
 
       - name: Check Common Actions Repository
-        uses: actions/checkout@v3
         run: | 
           ls -a
         shell: bash
