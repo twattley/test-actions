@@ -12,8 +12,3 @@ jobs:
         uses: twattley/test-actions-remote/test_action@main
         with:
           github-pat: ${{ secrets.TW_PAT }}
-
-      - name: Check Common Actions Repository
-        run: | 
-          ls -a
-        shell: bash
