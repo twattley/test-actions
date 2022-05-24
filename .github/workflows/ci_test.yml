@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Tests
-        uses: twattley/test-actions-remote@main
+        uses: twattley/test-actions-remote@main/test_action
         with:
           github-pat: ${{ secrets.TW_PAT }}
