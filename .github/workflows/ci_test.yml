@@ -7,7 +7,12 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-        - uses: twattley/test-actions-remote/test_action@main
-          with:
-            github-pat: ${{ secrets.TW_PAT }}
-            test-variable: ${{ secrets.TEST_VAR }}
+      - name: Tests
+        uses: twattley/test-actions-remote/test_action@main
+        with:
+          github-pat: ${{ secrets.TW_PAT }}
+          test-variable: ${{ secrets.TEST_VAR }}
+
+      - name: PR Check
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "PR Check"
