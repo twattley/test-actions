@@ -13,7 +13,6 @@ jobs:
         with:
           github-pat: ${{ secrets.TW_PAT }}
           test-variable: ${{ secrets.TEST_VAR }}
-# some text
       - name: PR Check
         if: ${{ github.event_name == 'pull_request' }}
         run: echo "PR Check"
