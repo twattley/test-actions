@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Tests
-        uses: twattley/test-actions-remote/main_runner@main
-        # with:
-        #   github-pat: ${{ secrets.TW_PAT }}
-        #   test-variable: ${{ secrets.TEST_VAR }}
+        uses: twattley/test-actions-remote/test_action@main
+        with:
+          github-pat: ${{ secrets.TW_PAT }}
+          test-variable: ${{ secrets.TEST_VAR }}
