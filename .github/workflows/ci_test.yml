@@ -3,7 +3,7 @@ name: Common Action
 on:
   - push
   - pull_request
-
+# test
 jobs:
   tests:
     runs-on: ubuntu-latest
