@@ -3,7 +3,7 @@ name: Common Action
 on:
   - push
   - pull_request
-# test
+# test pr
 jobs:
 
   tests:
