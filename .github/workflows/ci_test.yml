@@ -3,14 +3,14 @@ name: Common Action
 on:
   - push
   - pull_request
-# tets
+# test
 jobs:
 
   tests:
     runs-on: ubuntu-latest
     steps:
       - name: Tests
-        uses: twattley/test-actions-remote/main-folder@main
+        uses: twattley/test-actions-remote/check_git_history@main
         with:
           github-pat: ${{ secrets.TW_PAT }}
           test-variable: ${{ secrets.TEST_VAR }}
