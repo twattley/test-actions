@@ -2,7 +2,6 @@ name: Common Action
 
 on:
   - push
-  - pull_request
 # test pr
 jobs:
 
