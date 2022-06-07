@@ -1,7 +1,9 @@
 name: CI MERGE
 
 on:
-  - pull_request
+  pull_request:
+    types:  
+      - closed 
 
 jobs:
 
@@ -10,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-
       - name: Echo Merge
         run: |
           echo "Merge"
