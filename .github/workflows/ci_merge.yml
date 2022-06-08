@@ -11,5 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Echo Merge
+        if:  ${GITHUB_REF##*/} == 'tag_test'
         run: |
-          echo ${GITHUB_REF##*/}
+          echo 'this worked'
