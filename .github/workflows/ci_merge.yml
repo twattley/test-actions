@@ -2,11 +2,6 @@ name: Merge
 
 on:
   pull_request:
-    types: 
-    # only trigger on pull request closed events (no 'merge' option avaiable)
-      - closed
-    tags:
-      - 'uat'
 
 
 jobs:
