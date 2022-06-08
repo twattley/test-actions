@@ -1,15 +1,14 @@
-name: Common Action
+name: Push
 
 on:
   - push
 # test pr
 jobs:
 
-  tests:
+  push:
     runs-on: ubuntu-latest
     steps:
-      - name: Tests
-        uses: twattley/test-actions-remote/check_git_history@main
-        with:
-          github-pat: ${{ secrets.TW_PAT }}
-          test-variable: ${{ secrets.TEST_VAR }}
+      - uses: actions/checkout@v3
+      - name: Echo Push
+        run: |
+          echo "Push"

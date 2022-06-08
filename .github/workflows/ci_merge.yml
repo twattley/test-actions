@@ -1,13 +1,17 @@
-name: CI MERGE
+name: Merge
 
 on:
   pull_request:
-    types:  
-      - closed 
+    types: 
+    # only trigger on pull request closed events (no 'merge' option avaiable)
+      - closed
+    tags:
+      - 'uat'
+
 
 jobs:
 
-  build-push:
+  merge:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
