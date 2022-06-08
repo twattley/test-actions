@@ -3,9 +3,7 @@ name: Merge
 on:
   push:
     branches:
-      - main
-    tags:
-      - "uat"
+      - "main"
 
 # test
 jobs:
@@ -15,5 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Echo Merge
+        if: github.ref == 'refs/heads/tag_test'
         run: |
-          echo "Merge"
+          echo 'this worked'
