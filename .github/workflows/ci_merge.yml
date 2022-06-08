@@ -1,9 +1,10 @@
 name: Merge
 
 on:
-  push:
-    branches:
-      - "main"
+  pull_request:
+    types: 
+    # only trigger on pull request closed events (no 'merge' option avaiable)
+      - closed 
 
 # test
 jobs:
