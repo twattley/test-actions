@@ -1,7 +1,9 @@
 name: Merge
 
 on:
-  pull_request:
+  push:
+    branches:
+      - main
 
 
 jobs:
