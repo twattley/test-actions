@@ -1,20 +1,20 @@
-name: Merge
+# name: Merge
 
-on:
-  pull_request:
-    types: 
-    # only trigger on pull request closed events (no 'merge' option avaiable)
-      - closed 
+# on:
+#   pull_request:
+#     types: 
+#     # only trigger on pull request closed events (no 'merge' option avaiable)
+#       - closed 
 
-# test
-jobs:
+# # test
+# jobs:
 
-  merge:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Echo Merge
-        if: github.ref == 'refs/heads/tag_test'
-        run: |
-          echo "REPO_NAME=${{ github.event.repository.name }}" >> $GITHUB_ENV
-          echo $GITHUB_ENV
+#   merge:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Echo Merge
+#         if: github.ref == 'refs/heads/tag_test'
+#         run: |
+#           echo "REPO_NAME=${{ github.event.repository.name }}" >> $GITHUB_ENV
+#           echo $GITHUB_ENV
