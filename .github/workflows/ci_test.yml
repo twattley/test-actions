@@ -6,7 +6,7 @@ on:
 env:
   RPM_ENVIRONMENT: b2b-uat
   REACT_APP_RPM_ENVIRONMENT: ${{ env.RPM_ENVIRONMENT }}
-  
+
 jobs:
 
   tests:
@@ -16,7 +16,7 @@ jobs:
         uses: twattley/test-actions-remote@b2b-uat
         with:
           github-pat: ${{ secrets.TW_PAT }}
-          test-variable: $RPM_ENVIRONMENT
+          test-variable: ${{ env.RPM_ENVIRONMENT }}
 
 
 
