@@ -6,14 +6,14 @@ on:
 env:
   RPM_ENVIRONMENT: b2b-uat
   REACT_APP_RPM_ENVIRONMENT: b2b-uat
-
+  
 jobs:
 
   tests:
     runs-on: ubuntu-latest
     steps:
       - name: Tests
-        uses: twattley/test-actions-remote/basic@${{ RPM_ENVIRONMENT }}
+        uses: twattley/test-actions-remote/basic@b2b-uat
         with:
           github-pat: ${{ secrets.TW_PAT }}
           test-variable: ${{ secrets.TEST_VAR }}
