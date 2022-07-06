@@ -16,9 +16,8 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: twattley/test-actions-remote@b2b-uat
-        with:
-          token: ${{ secrets.TW_PAT }}
-          path: ./client
+        token: ${{ secrets.TW_PAT }}
+        path: ./client
 
 
 
