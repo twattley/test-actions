@@ -12,12 +12,11 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout Code in common Github Actions Repository
-      uses: actions/checkout@v3
-      with:
-        repository: twattley/test-actions-remote@b2b-uat
-        token: ${{ secrets.TW_PAT }}
-        path: ./client
+      - name: Tests
+        uses: twattley/test-actions-remote@b2b-uat
+        with:
+          github-pat: ${{ secrets.TW_PAT }}
+          test-variable: ${{ RPM_ENVIRONMENT }}
 
 
 
