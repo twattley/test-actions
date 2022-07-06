@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Tests
-        uses: twattley/test-actions-remote/basic@$RPM_ENVIRONMENT
+        uses: twattley/test-actions-remote/basic@${{ RPM_ENVIRONMENT }}
         with:
           github-pat: ${{ secrets.TW_PAT }}
           test-variable: ${{ secrets.TEST_VAR }}
