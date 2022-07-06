@@ -16,7 +16,7 @@ jobs:
         uses: twattley/test-actions-remote@b2b-uat
         with:
           github-pat: ${{ secrets.TW_PAT }}
-          test-variable: ${{ RPM_ENVIRONMENT }}
+          test-variable: $RPM_ENVIRONMENT
 
 
 
