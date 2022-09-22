@@ -9,16 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Tests
-        uses: twattley/test-actions-remote@b2b-uat
+        uses: twattley/test-actions-remote/check_git_history@main
         with:
           github-pat: ${{ secrets.TW_PAT }}
-          test-variable: ${{ env.RPM_ENVIRONMENT }}
-
-
-
-    # - name: Checkout Code in common Github Actions Repository
-    #   uses: actions/checkout@v3
-    #   with:
-    #     repository: sede-res/rpm-actions
-    #     token: ${{ inputs.github-pat }}
-    #     path: rpm-actions
