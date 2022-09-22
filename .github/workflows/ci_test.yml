@@ -3,10 +3,6 @@ name: Common Action
 on:
   - push
 
-env:
-  RPM_ENVIRONMENT: b2b-uat
-  REACT_APP_RPM_ENVIRONMENT: ${{ env.RPM_ENVIRONMENT }}
-
 jobs:
 
   tests:
